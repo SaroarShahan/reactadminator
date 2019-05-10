@@ -3,9 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bulma": "^0.7.4",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "number-abbreviate": "^2.0.0",
+    "prop-types": "^15.7.2",
+    "ramda": "^0.26.1",
     "react": "^16.8.6",
+    "react-day-picker": "^7.3.0",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-icons": "^3.6.1",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.1",
+    "react-spinners": "^0.5.4",
+    "react-toastify": "^5.1.0",
+    "recharts": "^1.5.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "sanctuary": "^2.0.0",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "redux-logger": "^3.0.6",
+    "tailwindcss": "^0.7.4"
   }
 }
