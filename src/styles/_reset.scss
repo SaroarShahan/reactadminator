@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+
 *,
 *::after,
 *::before {
@@ -10,12 +12,28 @@ html {
 
 body {
   margin: 0;
+  font-weight: 400;
   font-size: 1.6rem;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1.5rem;
+}
+
+p {
+  margin: 0 0 1.5rem;
+  &:last-child {
+    margin-bottom: 0rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #0f9aee;
+  transition: all .3s ease-in-out 0s;
 }
 
 ul {

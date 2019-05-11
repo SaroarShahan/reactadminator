@@ -1,16 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
-const SidebarMenu = () => {
+const SidebarMenu = ({location}) => {
   return (
     <Menu>
-      <h1>ReAdmin</h1>
+      <SidebarLogo>
+        <SidebarLogoText>ReAdmin</SidebarLogoText>
+      </SidebarLogo>
       <Ul>
-        <Li>Dashboard</Li>
-        <Li>Calendar</Li>
-        <Li>Chat</Li>
-        <Li>Charts</Li>
-        <Li>Forms</Li>
+        <Link to="/dashboard">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/dashboard')}>
+              Dashboard
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/calendar">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/calendar')}>
+              Calendar
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/chat">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/chat')}>
+              Chat
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/charts">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/charts')}>
+              Charts
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/forms">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/forms')}>
+              Forms
+            </Wrapper>
+          </Li>
+        </Link>
       </Ul>
     </Menu>
   );
@@ -19,7 +52,8 @@ const SidebarMenu = () => {
 export default SidebarMenu;
 
 const Menu = styled.aside`
-  background-color: #34495e;
+  background-color: #fff;
+  border-right: 1px solid rgba(0, 0, 0, 0.0625);
   height: 100vh;
   overflow-y: auto;
 
@@ -32,7 +66,7 @@ const Menu = styled.aside`
     }
     &-thumb {
       border-radius: 0rem;
-      background-color: #9b59b6;
+      background-color: #5f5f5f;
     }
   }
   &:hover {
@@ -42,16 +76,54 @@ const Menu = styled.aside`
   }
 `;
 
+const SidebarLogo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0625);
+`;
+
+const SidebarLogoText = styled.h3`
+  color: #313435;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.2rem;
+`;
+
 const Ul = styled.ul`
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-grow: 2;
 `;
 const Li = styled.li`
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  color: white;
-  margin-right: 5px;
+  color: #72777a;
+  height: 53px;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0;
+  padding-left: 1.2rem;
+  border-left: 0.5rem;
+  font-weight: 500;
+  background-color: ${props => props.isActive && ' #cacaca'};
+  color: ${props => props.isActive && ' #313435'};
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: ${props => props.isActive && '.5rem'};
+    height: 100%;
+    background-color: #5f5f5f;
+  }
 `;

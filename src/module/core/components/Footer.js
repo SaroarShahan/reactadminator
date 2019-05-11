@@ -2,9 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Footer = () => {
+  let today = new Date();
+
   return (
     <FooterWrapper>
-      <p>Copyright &copy; 2017. Developed by SaroarShahan. </p>
+      <p>
+        Copyright &copy; {today.getFullYear()} Developed by
+        <DevelopedLink
+          href="https://www.facebook.com/SaroarShahan"
+          rel="noopener noreferrer"
+          target="_blank">
+          SaroarShahan
+        </DevelopedLink>
+        .
+      </p>
     </FooterWrapper>
   );
 };
@@ -12,7 +23,21 @@ const Footer = () => {
 export default Footer;
 
 const FooterWrapper = styled.div`
-  color: #fff;
-  background-color: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7c8695;
+  background-color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.0625);
   text-align: center;
+  font-size: 1.2rem;
+`;
+
+const DevelopedLink = styled.a`
+  display: inline-block;
+  margin-left: 0.3rem;
+
+  &:hover {
+    color: #7c8695;
+  }
 `;

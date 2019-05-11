@@ -7,11 +7,11 @@ import Footer from './Footer';
 
 class Sidebar extends Component {
   render() {
-    const {children} = this.props;
+    const {children, location} = this.props;
     return (
       <>
         <Wrapper>
-          <SidebarMenu />
+          <SidebarMenu location={location} />
           <BodyContent>
             <Header />
             <MainConatiner>{children}</MainConatiner>
@@ -37,5 +37,6 @@ const BodyContent = styled.div`
 
 const MainConatiner = styled.main`
   width: 100%;
-  background-color: #f0f0f7;
+  background-color: #f9fafb;
+  padding: 2rem;
 `;
