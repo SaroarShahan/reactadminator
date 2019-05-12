@@ -1,5 +1,6 @@
 import React, {Component, Suspense, lazy} from 'react';
 import {Switch, Route} from 'react-router-dom';
+import Loader from '../../common/Loader';
 
 const ChartsContainer = lazy(() =>
   import('../containers/ChartsContainer').then(mod => ({
@@ -10,7 +11,7 @@ const ChartsContainer = lazy(() =>
 class ChartsRoute extends Component {
   render() {
     return (
-      <Suspense>
+      <Suspense fallback={<Loader fullscreen />}>
         <Switch>
           <Route exact path="/charts" component={ChartsContainer} />
         </Switch>
