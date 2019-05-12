@@ -31,6 +31,7 @@ const FooterWrapper = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.0625);
   text-align: center;
   font-size: 1.2rem;
+  min-height: 6rem;
 `;
 
 const DevelopedLink = styled.a`

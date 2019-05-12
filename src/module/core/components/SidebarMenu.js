@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
-const SidebarMenu = ({location}) => {
+const SidebarMenu = ({location, isActive}) => {
   return (
-    <Menu>
+    <Menu isActive={isActive}>
       <SidebarLogo>
         <SidebarLogoText>ReAdmin</SidebarLogoText>
       </SidebarLogo>
@@ -44,6 +44,132 @@ const SidebarMenu = ({location}) => {
             </Wrapper>
           </Li>
         </Link>
+        <Link to="/charts">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/charts')}>
+              Charts
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/forms">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/forms')}>
+              Forms
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/charts">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/charts')}>
+              Charts
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/forms">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/forms')}>
+              Forms
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/charts">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/charts')}>
+              Charts
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/forms">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/forms')}>
+              Forms
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/charts">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/charts')}>
+              Charts
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/forms">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/forms')}>
+              Forms
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/charts">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/charts')}>
+              Charts
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/forms">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/forms')}>
+              Forms
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/charts">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/charts')}>
+              Charts
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/forms">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/forms')}>
+              Forms
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/charts">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/charts')}>
+              Charts
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/forms">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/forms')}>
+              Forms
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/charts">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/charts')}>
+              Charts
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/forms">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/forms')}>
+              Forms
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/charts">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/charts')}>
+              Charts
+            </Wrapper>
+          </Li>
+        </Link>
+        <Link to="/forms">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/forms')}>
+              Forms
+            </Wrapper>
+          </Li>
+        </Link>
       </Ul>
     </Menu>
   );
@@ -52,28 +178,14 @@ const SidebarMenu = ({location}) => {
 export default SidebarMenu;
 
 const Menu = styled.aside`
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20.5rem;
   background-color: #fff;
   border-right: 1px solid rgba(0, 0, 0, 0.0625);
-  height: 100vh;
-  overflow-y: auto;
-
-  &::-webkit-scrollbar {
-    width: 0rem;
-    transition: all 400ms ease;
-    &-track {
-      -webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
-      background-color: #f5f5f5;
-    }
-    &-thumb {
-      border-radius: 0rem;
-      background-color: #5f5f5f;
-    }
-  }
-  &:hover {
-    &::-webkit-scrollbar {
-      width: 0.5rem;
-    }
-  }
+  transform: ${props => !props.isActive && 'translateX(-100%)'};
+  z-index: 99;
 `;
 
 const SidebarLogo = styled.div`
@@ -95,6 +207,26 @@ const Ul = styled.ul`
   display: flex;
   flex-direction: column;
   flex-grow: 2;
+  height: 100vh;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0rem;
+    transition: all 400ms ease;
+    &-track {
+      -webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
+      background-color: #f5f5f5;
+    }
+    &-thumb {
+      border-radius: 0rem;
+      background-color: #5f5f5f;
+    }
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+  }
 `;
 const Li = styled.li`
   display: flex;
@@ -102,7 +234,7 @@ const Li = styled.li`
   align-items: center;
   cursor: pointer;
   color: #72777a;
-  height: 53px;
+  height: 5.3rem;
 `;
 
 const Wrapper = styled.div`

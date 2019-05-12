@@ -20,6 +20,9 @@ const HeaderWrapper = styled.div`
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.0625);
   padding: 0 1rem;
+  position: fixed;
+  width: 100%;
+  height: 60px;
 `;
 
 const Hamburger = styled.div`
