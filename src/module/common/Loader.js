@@ -1,17 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 import {RingLoader} from 'react-spinners';
 
 const Loader = ({fullscreen, small, large, color}) => {
   if (fullscreen) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <Wrapper>
         <RingLoader
           sizeUnit={'px'}
           size={40}
           color={color || '#0f9aee'}
           loading={true}
         />
-      </div>
+      </Wrapper>
     );
   }
   if (small)
@@ -45,3 +46,11 @@ const Loader = ({fullscreen, small, large, color}) => {
 };
 
 export default Loader;
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: calc(100vh - 18rem);
+`;

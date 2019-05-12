@@ -39,18 +39,12 @@ const Sidebar = props => {
 export default withRouter(Sidebar);
 
 const Wrapper = styled.div`
-  /* display: grid;
-  grid-template-columns: ${props =>
-    props.isActive ? ' 20.5rem 1fr' : '0rem 1fr'}; */
-
-    display: flex;
+  display: flex;
   transition: all 0.4s ease 0s;
   position: relative;
 `;
 
 const BodyContent = styled.div`
-  /* display: grid;
-  grid-template-rows: 6rem auto 6rem; */
   padding-left: ${props => (props.isActive ? '20.5rem' : '0rem')};
   position: relative;
   display: flex;
