@@ -1,7 +1,9 @@
 import {combineReducers} from 'redux';
 
+import {chartsReducer} from './../module/charts/reducer/index';
+
 const appReducer = combineReducers({
-  dashboard: ''
+  chartsReducer
 });
 
 export default appReducer;
