@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import {MdFormatIndentDecrease} from 'react-icons/md';
 
-const Header = () => {
+const Header = ({onHamburger, isOpen}) => {
   return (
     <HeaderWrapper>
-      <h1>Header</h1>
+      <Hamburger onClick={() => onHamburger(!isOpen)}>
+        <MdFormatIndentDecrease />
+      </Hamburger>
     </HeaderWrapper>
   );
 };
@@ -12,6 +15,15 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.div`
+  display: flex;
+  align-items: center;
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.0625);
+  padding: 0 1rem;
+`;
+
+const Hamburger = styled.div`
+  padding: 0.5rem;
+  cursor: pointer;
+  line-height: 1;
 `;

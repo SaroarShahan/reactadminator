@@ -1,33 +1,42 @@
-import React, {Component} from 'react';
+import React, {useState, useEffect} from 'react';
 import {withRouter} from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header';
 import SidebarMenu from './SidebarMenu';
 import Footer from './Footer';
 
-class Sidebar extends Component {
-  render() {
-    const {children, location} = this.props;
-    return (
-      <>
-        <Wrapper>
-          <SidebarMenu location={location} />
-          <BodyContent>
-            <Header />
-            <MainConatiner>{children}</MainConatiner>
-            <Footer />
-          </BodyContent>
-        </Wrapper>
-      </>
-    );
-  }
-}
+const Sidebar = props => {
+  const [isOpen, setIsOpen] = useState(true);
+  const w = window.innerWidth;
+
+  useEffect(() => {
+    if (w <= 768) {
+      setIsOpen(false);
+    }
+  }, [w]);
+
+  const {children, location} = props;
+  return (
+    <>
+      <Wrapper isActive={isOpen}>
+        <SidebarMenu location={location} />
+        <BodyContent>
+          <Header isOpen={isOpen} onHamburger={setIsOpen} />
+          <MainConatiner>{children}</MainConatiner>
+          <Footer />
+        </BodyContent>
+      </Wrapper>
+    </>
+  );
+};
 
 export default withRouter(Sidebar);
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 20.5rem 1fr;
+  grid-template-columns: ${props =>
+    props.isActive ? ' 20.5rem 1fr' : '0rem 1fr'};
+  transition: all 0.4s ease 0s;
 `;
 
 const BodyContent = styled.div`
