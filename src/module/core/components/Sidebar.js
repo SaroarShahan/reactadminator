@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {withRouter} from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header';
@@ -7,13 +7,15 @@ import Footer from './Footer';
 
 const Sidebar = props => {
   const [isOpen, setIsOpen] = useState(true);
-  const w = window.innerWidth;
 
-  useEffect(() => {
+  window.addEventListener('resize', () => {
+    const w = window.innerWidth;
     if (w <= 768) {
       setIsOpen(false);
+    } else {
+      setIsOpen(true);
     }
-  }, [w]);
+  });
 
   const {children, location} = props;
   return (
