@@ -1,0 +1,16 @@
+
+.fc-button-primary {
+  text-transform: capitalize;
+  background-color: #cacaca;
+  border-color: #cacaca;
+  color: #313435;
+  font-weight: 500;
+}
+.fc-button-primary:not(:disabled):active:focus, .fc-button-primary:not(:disabled).fc-button-active:focus, .fc-button-primary:focus {
+  box-shadow: none;
+}
+
+.fc-button-primary:hover, .fc-button-primary:not(:disabled):active, .fc-button-primary:not(:disabled).fc-button-active {
+  background-color: #0f9aee;
+  border-color: #0f9aee;
+}

@@ -8,9 +8,10 @@ import Events from '../constants/events';
 import '@fullcalendar/core/main.css';
 import '@fullcalendar/daygrid/main.css';
 import '@fullcalendar/timegrid/main.css';
+import '../styles/calendar.scss';
 
 const Calendar = () => {
-  const [calendarWeekends, setCalendarWeekends] = useState(true);
+  const [calendarWeekends] = useState(true);
 
   return (
     <>
