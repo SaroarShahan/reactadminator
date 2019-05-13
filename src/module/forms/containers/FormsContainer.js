@@ -10,14 +10,14 @@ const FormsContainer = () => {
           <BoxWrapper>
             <Title>Basic Form</Title>
             <div className="field">
-              <label htmlFor="email" className="label">
+              <label htmlFor="email1" className="label">
                 Email address
               </label>
               <div className="control">
                 <input
                   className="input"
                   type="text"
-                  id="email"
+                  id="email1"
                   placeholder="Enter email"
                 />
               </div>
@@ -26,14 +26,14 @@ const FormsContainer = () => {
               </p>
             </div>
             <div className="field">
-              <label htmlFor="password" className="label">
+              <label htmlFor="password1" className="label">
                 Password
               </label>
               <div className="control">
                 <input
                   className="input"
                   type="text"
-                  id="password"
+                  id="password1"
                   placeholder="Enter Password"
                 />
               </div>
@@ -45,7 +45,7 @@ const FormsContainer = () => {
             <Title>Horizontal Form</Title>
             <div className="field is-horizontal">
               <div class="field-label is-normal">
-                <label htmlFor="email" className="label">
+                <label htmlFor="email2" className="label">
                   Email
                 </label>
               </div>
@@ -56,7 +56,7 @@ const FormsContainer = () => {
                     <input
                       className="input"
                       type="text"
-                      id="email"
+                      id="email2"
                       placeholder="Enter email"
                     />
                   </div>
@@ -66,7 +66,7 @@ const FormsContainer = () => {
 
             <div className="field is-horizontal">
               <div class="field-label is-normal">
-                <label htmlFor="password" className="label">
+                <label htmlFor="password2" className="label">
                   Password
                 </label>
               </div>
@@ -76,8 +76,8 @@ const FormsContainer = () => {
                   <div className="control">
                     <input
                       className="input"
-                      type="text"
-                      id="password"
+                      type="password"
+                      id="password2"
                       placeholder="Enter password"
                     />
                   </div>
@@ -90,7 +90,57 @@ const FormsContainer = () => {
         </div>
 
         <div className="column">
-          <BoxWrapper>dfadfasdfasf</BoxWrapper>
+          <BoxWrapper>
+            <Title>Basic Form</Title>
+
+            <div className="columns is-mobile">
+              <div className="column">
+                <div className="field">
+                  <label htmlFor="email3" className="label">
+                    Email
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type="text"
+                      id="email3"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="column">
+                <div className="field">
+                  <label htmlFor="password3" className="label">
+                    Password
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type="password"
+                      id="password3"
+                      placeholder="Enter Password"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="field">
+              <label htmlFor="address" className="label">
+                Address
+              </label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="text"
+                  id="address"
+                  placeholder="Dhaka, Bangladesh - 1212"
+                />
+              </div>
+            </div>
+
+            <button class="button is-primary">Submit</button>
+          </BoxWrapper>
         </div>
       </div>
     </>
