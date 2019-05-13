@@ -23,6 +23,7 @@ const HeaderWrapper = styled.div`
   position: fixed;
   width: 100%;
   height: 60px;
+  z-index: 999;
 `;
 
 const Hamburger = styled.div`

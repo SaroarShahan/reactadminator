@@ -55,6 +55,6 @@ const BodyContent = styled.div`
 const MainConatiner = styled.main`
   width: 100%;
   background-color: #f9fafb;
-  padding: 1rem;
+  padding: 2rem;
   min-height: calc(100vh - 12rem);
 `;
