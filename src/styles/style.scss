@@ -1,3 +1,4 @@
-@import"./reset";
+@import"../../node_modules/tailwindcss/dist/tailwind.min.css";
+@import "../../node_modules/bulma/bulma.sass";
 
-@import"../../node_modules/tailwindcss/dist/tailwind.min.css"
+@import"./reset";

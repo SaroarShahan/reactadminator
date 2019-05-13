@@ -8,9 +8,14 @@ const BoxWrapper = props => {
 export default BoxWrapper;
 
 const Container = styled.div`
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 3px;
   background-color: #fff;
   box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05),
     0 1px 3px 0 rgba(63, 63, 68, 0.15);
+  margin-bottom: 1.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;

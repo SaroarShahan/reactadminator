@@ -30,8 +30,8 @@ const FooterWrapper = styled.div`
   background-color: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.0625);
   text-align: center;
-  font-size: 1.2rem;
-  min-height: 6rem;
+  font-size: 1rem;
+  min-height: 4rem;
 `;
 
 const DevelopedLink = styled.a`

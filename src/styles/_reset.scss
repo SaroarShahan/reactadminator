@@ -6,21 +6,18 @@
   box-sizing: inherit
 }
 
-html {
-  font-size: 62.5%;
-}
-
 body {
   margin: 0;
   font-weight: 400;
-  font-size: 1.6rem;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   line-height: 1.4;
+  color: #72777a;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1.5rem;
+  letter-spacing: .1rem;
 }
 
 p {
@@ -40,4 +37,36 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.text-muted {
+  color: #868e96;
+}
+
+.label {
+  color: #72777a;
+  font-size: .8rem;
+  font-weight: 400;
+}
+
+.field-label .label {
+  font-size: .8rem;
+}
+
+.button, .input, .textarea, .select select, .file-cta, .file-name, .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
+  height: 2em;
+  font-size: .9rem;
+}
+
+.button.is-primary {
+  background-color: #0f9aee;
+  &:hover {
+    background-color: #0c7fc7;
+  }
+}
+@media screen and (min-width: 769px) {
+  .field-label {
+    margin-right: .5rem;
+    text-align: left;
+}
 }

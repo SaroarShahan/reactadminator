@@ -55,7 +55,7 @@ const Menu = styled.aside`
   position: fixed;
   left: 0;
   top: 0;
-  width: 20.5rem;
+  width: 15.5rem;
   background-color: #fff;
   border-right: 1px solid rgba(0, 0, 0, 0.0625);
   transform: ${props => !props.isActive && 'translateX(-100%)'};
@@ -66,7 +66,7 @@ const SidebarLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 6rem;
+  height: 4rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.0625);
 `;
 
@@ -108,14 +108,14 @@ const Li = styled.li`
   align-items: center;
   cursor: pointer;
   color: #72777a;
-  height: 5.3rem;
+  height: 3.3rem;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 1.5rem 0;
+  height: 100%;
   padding-left: 1.2rem;
   border-left: 0.5rem;
   font-weight: 500;
@@ -128,7 +128,7 @@ const Wrapper = styled.div`
     position: absolute;
     left: 0;
     top: 0;
-    width: ${props => props.isActive && '.5rem'};
+    width: ${props => props.isActive && '.3rem'};
     height: 100%;
     background-color: #5f5f5f;
   }

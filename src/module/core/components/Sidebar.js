@@ -45,7 +45,7 @@ const Wrapper = styled.div`
 `;
 
 const BodyContent = styled.div`
-  padding-left: ${props => (props.isActive ? '20.5rem' : '0rem')};
+  padding-left: ${props => (props.isActive ? '15.5rem' : '0rem')};
   position: relative;
   display: flex;
   flex-direction: column;
@@ -55,6 +55,6 @@ const BodyContent = styled.div`
 const MainConatiner = styled.main`
   width: 100%;
   background-color: #f9fafb;
-  padding: 2rem;
-  min-height: calc(100vh - 12rem);
+  padding: 1.5rem;
+  min-height: calc(100vh - 7.8rem);
 `;
