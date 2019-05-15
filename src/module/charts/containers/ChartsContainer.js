@@ -3,21 +3,32 @@ import {withRouter} from 'react-router-dom';
 import styled from 'styled-components';
 import LineCharts from '../components/LineCharts';
 import AreaCharts from './../components/AreaCharts';
+import BarCharts from '../components/BarCharts';
 
 const Charts = () => {
   return (
-    <div className="columns is-mobile">
-      <div className="column">
-        <LineCharts>
-          <Title>Line Chart</Title>
-        </LineCharts>
+    <>
+      <div className="columns is-mobile">
+        <div className="column">
+          <LineCharts>
+            <Title>Line Chart</Title>
+          </LineCharts>
+        </div>
+        <div className="column">
+          <AreaCharts>
+            <Title>Area Chart</Title>
+          </AreaCharts>
+        </div>
       </div>
-      <div className="column">
-        <AreaCharts>
-          <Title>Area Chart</Title>
-        </AreaCharts>
+      <div className="columns is-mobile">
+        <div className="column">
+          <BarCharts>
+            <Title>Bar Chart</Title>
+          </BarCharts>
+        </div>
+        <div className="column">fasdfas</div>
       </div>
-    </div>
+    </>
   );
 };
 
