@@ -9,7 +9,7 @@ import PieCharts from '../components/PieCharts';
 const Charts = () => {
   return (
     <>
-      <div className="columns is-mobile">
+      <div className="columns is-desktop">
         <div className="column">
           <LineCharts>
             <Title>Line Chart</Title>
@@ -21,7 +21,7 @@ const Charts = () => {
           </AreaCharts>
         </div>
       </div>
-      <div className="columns is-mobile">
+      <div className="columns is-desktop">
         <div className="column">
           <BarCharts>
             <Title>Bar Chart</Title>
