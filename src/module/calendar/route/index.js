@@ -9,7 +9,7 @@ class CalenadrRoute extends Component {
     return (
       <Suspense fallback={<Loader fullscreen />}>
         <Switch>
-          <Route exact path="/calendar" component={Calendar} />
+          <Route exact path="/readminator/calendar" component={Calendar} />
         </Switch>
       </Suspense>
     );

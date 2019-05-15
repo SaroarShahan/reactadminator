@@ -9,38 +9,44 @@ const SidebarMenu = ({location, isActive}) => {
         <SidebarLogoText>ReAdmin</SidebarLogoText>
       </SidebarLogo>
       <Ul>
-        <Link to="/dashboard">
+        <Link to="/readminator/dashboard">
           <Li>
-            <Wrapper isActive={location.pathname.includes('/dashboard')}>
+            <Wrapper
+              isActive={location.pathname.includes('/readminator/dashboard')}>
               Dashboard
             </Wrapper>
           </Li>
         </Link>
-        <Link to="/calendar">
+        <Link to="/readminator/calendar">
           <Li>
-            <Wrapper isActive={location.pathname.includes('/calendar')}>
+            <Wrapper
+              isActive={location.pathname.includes('/readminator/calendar')}>
               Calendar
             </Wrapper>
           </Li>
         </Link>
-        <Link to="/charts">
+        <Link to="/readminator/charts">
           <Li>
-            <Wrapper isActive={location.pathname.includes('/charts')}>
+            <Wrapper
+              isActive={location.pathname.includes('/readminator/charts')}>
               Charts
             </Wrapper>
           </Li>
         </Link>
-        <Link to="/forms">
+        <Link to="/readminator/forms">
           <Li>
-            <Wrapper isActive={location.pathname.includes('/forms')}>
+            <Wrapper
+              isActive={location.pathname.includes('/readminator/forms')}>
               Forms
             </Wrapper>
           </Li>
         </Link>
 
-        <Link to="/map">
+        <Link to="/readminator/map">
           <Li>
-            <Wrapper isActive={location.pathname.includes('/map')}>Map</Wrapper>
+            <Wrapper isActive={location.pathname.includes('/readminator/map')}>
+              Map
+            </Wrapper>
           </Li>
         </Link>
       </Ul>

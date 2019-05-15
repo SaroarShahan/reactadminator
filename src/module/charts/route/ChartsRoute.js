@@ -13,7 +13,7 @@ class ChartsRoute extends Component {
     return (
       <Suspense fallback={<Loader fullscreen />}>
         <Switch>
-          <Route exact path="/charts" component={ChartsContainer} />
+          <Route exact path="/readminator/charts" component={ChartsContainer} />
         </Switch>
       </Suspense>
     );

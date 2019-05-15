@@ -14,8 +14,12 @@ class DashboardRoute extends Component {
     return (
       <Suspense fallback={<Loader fullscreen />}>
         <Switch>
-          <Route exact path="/dashboard" component={DashboardContainer} />
-          <Redirect exact from="/" to="/dashboard" />
+          <Route
+            exact
+            path="/readminator/dashboard"
+            component={DashboardContainer}
+          />
+          <Redirect exact from="/readminator" to="/readminator/dashboard" />
           <Route render={() => <PageNotFound history={this.props.history} />} />
         </Switch>
       </Suspense>

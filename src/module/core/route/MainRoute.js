@@ -6,25 +6,25 @@ import mapRoute from '../../maps/route/mapRoute';
 
 export const MainRoute = [
   {
-    path: '/dashboard',
+    path: '/readminator/dashboard',
     component: DashboardRoute
   },
   {
-    path: '/calendar',
+    path: '/readminator/calendar',
     component: CalenadrRoute
   },
   {
-    path: '/charts',
+    path: '/readminator/charts',
     component: ChartsRoute
   },
   {
-    path: '/forms',
+    path: '/readminator/forms',
     component: FormRoute
   },
   {
-    path: '/map',
+    path: '/readminator/map',
     component: mapRoute
   },
 
-  {path: '/', component: DashboardRoute, exact: true}
+  {path: '/readminator', component: DashboardRoute, exact: true}
 ];
