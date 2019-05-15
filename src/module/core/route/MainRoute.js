@@ -2,6 +2,7 @@ import DashboardRoute from '../../dashboard/route';
 import ChartsRoute from '../../charts/route/ChartsRoute';
 import CalenadrRoute from './../../calendar/route/index';
 import FormRoute from './../../forms/route/FormRoute';
+import mapRoute from '../../maps/route/mapRoute';
 
 export const MainRoute = [
   {
@@ -19,6 +20,10 @@ export const MainRoute = [
   {
     path: '/forms',
     component: FormRoute
+  },
+  {
+    path: '/map',
+    component: mapRoute
   },
 
   {path: '/', component: DashboardRoute, exact: true}

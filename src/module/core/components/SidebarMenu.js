@@ -23,13 +23,6 @@ const SidebarMenu = ({location, isActive}) => {
             </Wrapper>
           </Li>
         </Link>
-        <Link to="/chat">
-          <Li>
-            <Wrapper isActive={location.pathname.includes('/chat')}>
-              Chat
-            </Wrapper>
-          </Li>
-        </Link>
         <Link to="/charts">
           <Li>
             <Wrapper isActive={location.pathname.includes('/charts')}>
@@ -42,6 +35,12 @@ const SidebarMenu = ({location, isActive}) => {
             <Wrapper isActive={location.pathname.includes('/forms')}>
               Forms
             </Wrapper>
+          </Li>
+        </Link>
+
+        <Link to="/map">
+          <Li>
+            <Wrapper isActive={location.pathname.includes('/map')}>Map</Wrapper>
           </Li>
         </Link>
       </Ul>
