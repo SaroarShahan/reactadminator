@@ -2,6 +2,7 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import styled from 'styled-components';
 import LineCharts from '../components/LineCharts';
+import AreaCharts from './../components/AreaCharts';
 
 const Charts = () => {
   return (
@@ -11,7 +12,11 @@ const Charts = () => {
           <Title>Line Chart</Title>
         </LineCharts>
       </div>
-      <div className="column">dfasdfsa</div>
+      <div className="column">
+        <AreaCharts>
+          <Title>Area Chart</Title>
+        </AreaCharts>
+      </div>
     </div>
   );
 };
