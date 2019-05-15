@@ -42,7 +42,7 @@ const LineCharts = () => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" interval={0} tick={<TickFormater />} />
           <YAxis tickFormatter={formatter} />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" fill="#8884d8" />
+          <Line type="monotone" dataKey="pv" stroke="#8884d8" />
           <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>
