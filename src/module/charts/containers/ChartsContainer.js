@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import LineCharts from '../components/LineCharts';
 import AreaCharts from './../components/AreaCharts';
 import BarCharts from '../components/BarCharts';
+import PieCharts from '../components/PieCharts';
 
 const Charts = () => {
   return (
@@ -26,7 +27,11 @@ const Charts = () => {
             <Title>Bar Chart</Title>
           </BarCharts>
         </div>
-        <div className="column">fasdfas</div>
+        <div className="column">
+          <PieCharts>
+            <Title>Pie Chart</Title>
+          </PieCharts>
+        </div>
       </div>
     </>
   );
