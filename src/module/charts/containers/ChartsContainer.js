@@ -1,11 +1,15 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
+import LineCharts from '../components/LineCharts';
 
 const Charts = () => {
   return (
-    <>
-      <h2> charts</h2>
-    </>
+    <div className="columns is-mobile">
+      <div className="column">
+        <LineCharts />
+      </div>
+      <div className="column">dfasdfsa</div>
+    </div>
   );
 };
 
