@@ -31,9 +31,10 @@ const TickFormater = props => {
   );
 };
 
-const LineCharts = () => {
+const LineCharts = ({children}) => {
   return (
     <BoxWrapper>
+      {children}
       <ResponsiveContainer width={'100%'} height={300}>
         <LineChart
           data={data}
