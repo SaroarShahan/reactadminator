@@ -1,5 +1,5 @@
 import React from 'react';
-import {BarChart, XAxis, YAxis, Bar, Cell, ResponsiveContainer} from 'recharts';
+import {BarChart, XAxis, YAxis, Bar, ResponsiveContainer} from 'recharts';
 import BoxWrapper from '../../common/BoxWrapper';
 import {data} from '../constants/data';
 let abbreviate = require('number-abbreviate');
