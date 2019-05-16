@@ -8,6 +8,7 @@ const BoxWrapper = props => {
 export default BoxWrapper;
 
 const Container = styled.div`
+  width: 100%;
   padding: 1.5rem;
   border-radius: 3px;
   background-color: #fff;

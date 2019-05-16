@@ -38,20 +38,20 @@ const FormsContainer = () => {
                 />
               </div>
             </div>
-            <button class="button is-primary">Submit</button>
+            <button className="button is-primary">Submit</button>
           </BoxWrapper>
 
           <BoxWrapper>
             <Title>Horizontal Form</Title>
             <div className="field is-horizontal">
-              <div class="field-label is-normal">
-                <label htmlFor="email2" className="label">
+              <div className="field-label is-normal">
+                <label htmlFor="email2" classNameName="label">
                   Email
                 </label>
               </div>
 
-              <div class="field-body">
-                <div class="field">
+              <div className="field-body">
+                <div className="field">
                   <div className="control">
                     <input
                       className="input"
@@ -71,8 +71,8 @@ const FormsContainer = () => {
                 </label>
               </div>
 
-              <div class="field-body">
-                <div class="field">
+              <div className="field-body">
+                <div className="field">
                   <div className="control">
                     <input
                       className="input"
@@ -85,7 +85,7 @@ const FormsContainer = () => {
               </div>
             </div>
 
-            <button class="button is-primary">Submit</button>
+            <button className="button is-primary">Submit</button>
           </BoxWrapper>
         </div>
 

@@ -50,6 +50,7 @@ const BodyContent = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  width: 100%;
 `;
 
 const MainConatiner = styled.main`

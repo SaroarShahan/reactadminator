@@ -4,8 +4,8 @@ import BoxWrapper from './../../common/BoxWrapper';
 
 const VisitSummary = () => {
   return (
-    <div className="columns is-mobile">
-      <div className="column is-3">
+    <div className="columns is-desktop">
+      <div className="column">
         <BoxWrapper>
           <Card>
             <Title>Total Visits</Title>
@@ -13,7 +13,7 @@ const VisitSummary = () => {
           </Card>
         </BoxWrapper>
       </div>
-      <div className="column is-3">
+      <div className="column">
         <BoxWrapper>
           <Card>
             <Title>Total Page Views</Title>
@@ -21,7 +21,7 @@ const VisitSummary = () => {
           </Card>
         </BoxWrapper>
       </div>
-      <div className="column is-3">
+      <div className="column">
         <BoxWrapper>
           <Card>
             <Title>Unique Visitor</Title>
@@ -29,7 +29,7 @@ const VisitSummary = () => {
           </Card>
         </BoxWrapper>
       </div>
-      <div className="column is-3">
+      <div className="column">
         <BoxWrapper>
           <Card>
             <Title>Bounce Rate</Title>
