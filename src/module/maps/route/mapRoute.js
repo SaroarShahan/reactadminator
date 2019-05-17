@@ -8,7 +8,7 @@ const mapRoute = () => {
   return (
     <Suspense fallback={<Loader fullscreen />}>
       <Switch>
-        <Route exact path="/readminator/map" component={MapContainer} />
+        <Route exact path="/map" component={MapContainer} />
       </Switch>
     </Suspense>
   );

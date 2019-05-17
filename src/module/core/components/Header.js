@@ -1,13 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
-import {MdFormatIndentDecrease} from 'react-icons/md';
+import {MdSwapHoriz} from 'react-icons/md';
+import UserAvatar from '../../../assets/images/saroarshahan.jpg';
 
 const Header = ({onHamburger, isOpen}) => {
+  const [isUserOpen, setIsUserOpen] = useState(false);
   return (
     <HeaderWrapper>
       <Hamburger onClick={() => onHamburger(!isOpen)}>
-        <MdFormatIndentDecrease />
+        <MdSwapHoriz />
       </Hamburger>
+      <User onClick={() => setIsUserOpen(!isUserOpen)}>
+        <Avatar src={UserAvatar} alt="user avatar" />
+        <UserName>Shahan</UserName>
+        <Ul isActive={isUserOpen}>
+          <Li>Logout</Li>
+        </Ul>
+      </User>
     </HeaderWrapper>
   );
 };
@@ -29,5 +38,38 @@ const HeaderWrapper = styled.div`
 const Hamburger = styled.div`
   padding: 0.5rem;
   cursor: pointer;
-  line-height: 1;
+  line-height: 0;
+`;
+
+const User = styled.div`
+  position: fixed;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+`;
+
+const Avatar = styled.img`
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+`;
+
+const UserName = styled.span`
+  padding-left: 0.3rem;
+`;
+
+const Ul = styled.ul`
+  position: absolute;
+  top: 120%;
+  right: 0;
+  border: 1px solid rgba(0, 0, 0, 0.0625);
+  background-color: #fff;
+  width: 10rem;
+  border-radius: 0.2rem;
+  z-index: 999;
+  opacity: ${props => (props.isActive ? '1' : '0')};
+`;
+const Li = styled.li`
+  padding: 1rem;
 `;

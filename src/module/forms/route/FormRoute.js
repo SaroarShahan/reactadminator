@@ -9,7 +9,7 @@ class FormRoute extends Component {
     return (
       <Suspense fallback={<Loader fullscreen />}>
         <Switch>
-          <Route exact path="/readminator/forms" component={FormsContainer} />
+          <Route exact path="/forms" component={FormsContainer} />
         </Switch>
       </Suspense>
     );

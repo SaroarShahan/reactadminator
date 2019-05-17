@@ -2,51 +2,45 @@ import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
-const SidebarMenu = ({location, isActive}) => {
+const SidebarMenu = ({location, history, isActive}) => {
   return (
     <Menu isActive={isActive}>
-      <SidebarLogo>
-        <SidebarLogoText>ReAdmin</SidebarLogoText>
+      <SidebarLogo onClick={() => history.push('/')}>
+        <SidebarLogoText>ReactAdminator</SidebarLogoText>
       </SidebarLogo>
       <Ul>
-        <Link to="/readminator/dashboard">
+        <Link to="/dashboard">
           <Li>
-            <Wrapper
-              isActive={location.pathname.includes('/readminator/dashboard')}>
+            <Wrapper isActive={location.pathname.includes('/dashboard')}>
               Dashboard
             </Wrapper>
           </Li>
         </Link>
-        <Link to="/readminator/calendar">
+        <Link to="/calendar">
           <Li>
-            <Wrapper
-              isActive={location.pathname.includes('/readminator/calendar')}>
+            <Wrapper isActive={location.pathname.includes('/calendar')}>
               Calendar
             </Wrapper>
           </Li>
         </Link>
-        <Link to="/readminator/charts">
+        <Link to="/charts">
           <Li>
-            <Wrapper
-              isActive={location.pathname.includes('/readminator/charts')}>
+            <Wrapper isActive={location.pathname.includes('/charts')}>
               Charts
             </Wrapper>
           </Li>
         </Link>
-        <Link to="/readminator/forms">
+        <Link to="/forms">
           <Li>
-            <Wrapper
-              isActive={location.pathname.includes('/readminator/forms')}>
+            <Wrapper isActive={location.pathname.includes('/forms')}>
               Forms
             </Wrapper>
           </Li>
         </Link>
 
-        <Link to="/readminator/map">
+        <Link to="/map">
           <Li>
-            <Wrapper isActive={location.pathname.includes('/readminator/map')}>
-              Map
-            </Wrapper>
+            <Wrapper isActive={location.pathname.includes('/map')}>Map</Wrapper>
           </Li>
         </Link>
       </Ul>
@@ -73,6 +67,7 @@ const SidebarLogo = styled.div`
   justify-content: center;
   height: 4rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.0625);
+  cursor: pointer;
 `;
 
 const SidebarLogoText = styled.h3`
@@ -80,6 +75,7 @@ const SidebarLogoText = styled.h3`
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.2rem;
+  margin-bottom: 0;
 `;
 
 const Ul = styled.ul`

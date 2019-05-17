@@ -18,11 +18,11 @@ const Sidebar = props => {
     }
   });
 
-  const {children, location} = props;
+  const {children, location, history} = props;
   return (
     <>
       <Wrapper isActive={isOpen}>
-        <SidebarMenu location={location} isActive={isOpen} />
+        <SidebarMenu location={location} history={history} isActive={isOpen} />
         <BodyContent isActive={isOpen}>
           <div>
             <Header isOpen={isOpen} onHamburger={setIsOpen} />
