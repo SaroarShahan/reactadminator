@@ -1,19 +1,34 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
 import {MdSwapHoriz} from 'react-icons/md';
 import UserAvatar from '../../../assets/images/saroarshahan.jpg';
 
 const Header = ({onHamburger, isOpen}) => {
   const [isUserOpen, setIsUserOpen] = useState(false);
+  let dropdownMenu = useRef(null);
+
+  const showMenu = () => {
+    setIsUserOpen(true);
+    document.addEventListener('click', closeMenu);
+  };
+
+  const closeMenu = event => {
+    if (!dropdownMenu.current.contains(event.target)) {
+      setIsUserOpen(false);
+      document.removeEventListener('click', closeMenu);
+    }
+  };
+
   return (
     <HeaderWrapper>
       <Hamburger onClick={() => onHamburger(!isOpen)}>
         <MdSwapHoriz />
       </Hamburger>
-      <User onClick={() => setIsUserOpen(!isUserOpen)}>
+      <User onClick={showMenu}>
         <Avatar src={UserAvatar} alt="user avatar" />
         <UserName>Shahan</UserName>
-        <Ul isActive={isUserOpen}>
+
+        <Ul isActive={isUserOpen} ref={dropdownMenu}>
           <Li>Logout</Li>
         </Ul>
       </User>
