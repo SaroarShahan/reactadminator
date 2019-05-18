@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {withRouter} from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header';
@@ -8,6 +8,10 @@ import {Base} from './Base';
 
 const Sidebar = props => {
   const [isOpen, setIsOpen] = useState(true);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, []);
 
   window.addEventListener('resize', () => {
     const w = window.innerWidth;
