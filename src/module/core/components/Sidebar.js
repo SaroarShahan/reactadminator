@@ -8,13 +8,13 @@ import {Base} from './Base';
 
 const Sidebar = props => {
   const [isOpen, setIsOpen] = useState(true);
+  const w = window.innerWidth;
 
   useEffect(() => {
-    setIsOpen(false);
-  }, []);
+    if (w <= 768) setIsOpen(false);
+  }, [w]);
 
   window.addEventListener('resize', () => {
-    const w = window.innerWidth;
     if (w <= 768) {
       setIsOpen(false);
     } else {
@@ -22,11 +22,21 @@ const Sidebar = props => {
     }
   });
 
+  const handleClick = () => {
+    if (w <= 768) setIsOpen(false);
+  };
+
   const {children, location, history} = props;
+
   return (
     <>
       <Wrapper isActive={isOpen}>
-        <SidebarMenu location={location} history={history} isActive={isOpen} />
+        <SidebarMenu
+          location={location}
+          history={history}
+          isActive={isOpen}
+          onClick={handleClick}
+        />
         <BodyContent isActive={isOpen}>
           <div>
             <Header isOpen={isOpen} onHamburger={setIsOpen} />

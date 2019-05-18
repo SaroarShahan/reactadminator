@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
-const SidebarMenu = ({location, history, isActive}) => {
+const SidebarMenu = ({location, history, isActive, onClick}) => {
   return (
     <Menu isActive={isActive}>
       <SidebarLogo onClick={() => history.push('/')}>
@@ -10,28 +10,28 @@ const SidebarMenu = ({location, history, isActive}) => {
       </SidebarLogo>
       <Ul>
         <Link to="/dashboard">
-          <Li>
+          <Li onClick={onClick}>
             <Wrapper isActive={location.pathname.includes('/dashboard')}>
               Dashboard
             </Wrapper>
           </Li>
         </Link>
         <Link to="/calendar">
-          <Li>
+          <Li onClick={onClick}>
             <Wrapper isActive={location.pathname.includes('/calendar')}>
               Calendar
             </Wrapper>
           </Li>
         </Link>
         <Link to="/charts">
-          <Li>
+          <Li onClick={onClick}>
             <Wrapper isActive={location.pathname.includes('/charts')}>
               Charts
             </Wrapper>
           </Li>
         </Link>
         <Link to="/forms">
-          <Li>
+          <Li onClick={onClick}>
             <Wrapper isActive={location.pathname.includes('/forms')}>
               Forms
             </Wrapper>
@@ -39,7 +39,7 @@ const SidebarMenu = ({location, history, isActive}) => {
         </Link>
 
         <Link to="/map">
-          <Li>
+          <Li onClick={onClick}>
             <Wrapper isActive={location.pathname.includes('/map')}>Map</Wrapper>
           </Li>
         </Link>

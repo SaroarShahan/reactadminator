@@ -45,7 +45,7 @@ const FormsContainer = () => {
             <Title>Horizontal Form</Title>
             <div className="field is-horizontal">
               <div className="field-label is-normal">
-                <label htmlFor="email2" classNameName="label">
+                <label htmlFor="email2" className="label">
                   Email
                 </label>
               </div>
@@ -65,7 +65,7 @@ const FormsContainer = () => {
             </div>
 
             <div className="field is-horizontal">
-              <div class="field-label is-normal">
+              <div className="field-label is-normal">
                 <label htmlFor="password2" className="label">
                   Password
                 </label>
@@ -139,7 +139,7 @@ const FormsContainer = () => {
               </div>
             </div>
 
-            <button class="button is-primary">Submit</button>
+            <button className="button is-primary">Submit</button>
           </BoxWrapper>
         </div>
       </div>
