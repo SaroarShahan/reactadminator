@@ -84,6 +84,8 @@ const Ul = styled.ul`
   border-radius: 0.2rem;
   z-index: 999;
   opacity: ${props => (props.isActive ? '1' : '0')};
+  visibility: ${props => (props.isActive ? 'visible' : 'hidden')};
+  transition: all 0.3s ease-in-out 0s;
 `;
 const Li = styled.li`
   padding: 1rem;
