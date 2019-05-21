@@ -2,12 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Footer = () => {
-  let today = new Date();
-
   return (
     <FooterWrapper>
       <p>
-        Copyright &copy; {today.getFullYear()} Developed by
+        Copyright &copy; {new Date().getFullYear()} Developed by
         <DevelopedLink
           href="https://www.facebook.com/SaroarShahan"
           rel="noopener noreferrer"
